@@ -3,11 +3,11 @@ $:.push File.expand_path("../lib", __FILE__)
 require "closure-sprockets/version"
 
 Gem::Specification.new do |s|
-  s.name        = "closure-sprockets"
+  s.name        = "closure-asset-pipeline"
   s.version     = Closure::Sprockets::VERSION
-  s.authors     = ["Ilya Grigorik"]
-  s.email       = ["ilya@igvita.com"]
-  s.homepage    = "https://github.com/igrigorik/closure-sprockets"
+  s.authors     = ["Arnold Noronha", "Ilya Grigorik"]
+  s.email       = ["arnstein87@gmail.com", "ilya@igvita.com"]
+  s.homepage    = "https://github.com/tdrhq/closure-asset-pipline"
   s.summary     = "Sprockets processor for Google's Closure tools"
   s.description = s.summary
 
