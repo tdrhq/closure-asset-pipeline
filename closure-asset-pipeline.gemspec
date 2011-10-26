@@ -4,7 +4,7 @@ require "closure-asset-pipeline/version"
 
 Gem::Specification.new do |s|
   s.name        = "closure-asset-pipeline"
-  s.version     = Closure::Sprockets::VERSION
+  s.version     = Closure::AssetPipeline::VERSION
   s.authors     = ["Arnold Noronha", "Ilya Grigorik"]
   s.email       = ["arnstein87@gmail.com", "ilya@igvita.com"]
   s.homepage    = "https://github.com/tdrhq/closure-asset-pipline"
