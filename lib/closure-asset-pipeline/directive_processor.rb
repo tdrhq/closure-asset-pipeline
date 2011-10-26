@@ -11,7 +11,13 @@ class ClosureDependenciesProcessor < Tilt::Template
     File.expand_path("../../../vendor/assets/javascripts/closure-library/", __FILE__)
   end
 
+  def self.compiler_jar
+    File.expand_path("../../../vendor/bin/compiler.jar", __FILE__)
+  end
+
   def evaluate(context, locals, &block)
-    data
+    f = Tempfile.new(["result", ".js"])
+    cmd = p("#{self.class.closure_bin} --root=#{self.class.closure_library} --root=#{p(@options[:root_dir])} -i #{file} --output_mode=compiled --compiler_jar=#{self.class.compiler_jar}")
+    `#{cmd}`
   end
 end
