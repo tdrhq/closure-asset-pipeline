@@ -16,8 +16,9 @@ class ClosureDependenciesProcessor < Tilt::Template
   end
 
   def evaluate(context, locals, &block)
+    root_dir = @options[:root_dir] || "./assets/javascripts" 
     f = Tempfile.new(["result", ".js"])
-    cmd = p("#{self.class.closure_bin} --root=#{self.class.closure_library} --root=#{p(@options[:root_dir])} -i #{file} --output_mode=compiled --compiler_jar=#{self.class.compiler_jar}")
+    cmd = p("#{self.class.closure_bin} --root=#{self.class.closure_library} --root=#{root_dir} -i #{file} --output_mode=compiled --compiler_jar=#{self.class.compiler_jar}")
     `#{cmd}`
   end
 end
