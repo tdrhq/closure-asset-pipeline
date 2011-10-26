@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "closure-sprockets/version"
+require "closure-asset-pipeline/version"
 
 Gem::Specification.new do |s|
   s.name        = "closure-asset-pipeline"
