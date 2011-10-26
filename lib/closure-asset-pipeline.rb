@@ -1,6 +1,6 @@
 require "tilt"
 
-require "closure-sprockets/version"
-require "closure-sprockets/directive_processor"
-require "closure-sprockets/soy_processor"
-require "closure-sprockets/railtie" if defined?(Rails)
+require "closure-asset-pipeline/version"
+require "closure-asset-pipeline/directive_processor"
+require "closure-asset-pipeline/soy_processor"
+require "closure-asset-pipeline/railtie" if defined?(Rails)
